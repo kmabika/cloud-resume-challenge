@@ -16,7 +16,7 @@
       as="font"
       crossorigin="anonymous"
     />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,18 +24,39 @@
       rel="stylesheet"
     />
     <link href="./assets/css/style.css" rel="stylesheet" />
+    <script src="assets/js/app.js"></script>
     <title>Kudzai Mabika — Resume</title>
   </head>
 
+  <!-- <script>
+    updateCounter();
+  </script> -->
   <body>
     <p class="mt-4 text-center leading-normal text-gray-700 text-md">
-      You are visitor number 2
+      You are visitor number:<span id="counter"></span>
     </p>
     <main class="font-jost hyphens-manual">
       <!-- Page -------------------------------------------------------------------------------------------------------->
       <div
         class="max-w-3xl p-3 mx-auto my-auto bg-gray-100 border-4 border-gray-700 print:border-0 page print:max-w-letter print:max-h-letter print:mx-0 print:my-o lg:h-letter md:max-w-letter md:h-letter xsm:p-8 sm:p-9 lg:mt-6 rounded-2xl print:bg-white"
       >
+    <!-- Download Resume -------------------------------------------------------------------------------------------------------->
+        <div>
+          <p class="text-lg font-semibold text-gray-700 leading-snugish">
+            <a
+              href="assets/kudzaimabika-resume.pdf"
+              target="_blank"
+              class="group"
+            >
+              <span
+                class="inline-block mr-3 font-normal transition duration-100 ease-in text-gray-550 print:text-black group-hover:text-gray-700"
+              >
+                <i class="fas fa-file-download"></i>
+                Download
+              </span>
+            </a>
+          </p>
+        </div>
         <!-- Name ---------------------------------------------------------------------------------------------------->
         <header
           class="inline-flex items-baseline justify-between w-full mb-3 align-top border-b-8"
@@ -49,11 +70,11 @@
               AWS Certified Developer Associate Developer
             </h2>
             <!--Location --------------------------------------------------------------------------------------------------------->
-            
+
             <h3
               class="m-0 mt-2 mb-2 font-semibold text-md text-gray-550 leading-snugish"
             >
-             Johannesburg, South Africa
+              Johannesburg, South Africa
             </h3>
           </div>
           <!--   Initials Block         -->
@@ -160,10 +181,12 @@
 
               <section class="mb-2 break-inside-avoid">
                 <p class="mt-2 leading-normal text-gray-700 text-md">
-                  Monash University Bachelor of Computer Science and Information Sciences graduate and AWS Certified Developer Associate with a passion for developing scalable web applications 
-                  and working across the full stack. I’m looking to join development teams to learn from more experienced developers 
-                  and grow my career.
-                  </p>
+                  Monash University Bachelor of Computer Science and Information
+                  Sciences graduate and AWS Certified Developer Associate with a
+                  passion for developing scalable web applications and working
+                  across the full stack. I’m looking to join development teams
+                  to learn from more experienced developers and grow my career.
+                </p>
               </section>
             </div>
           </section>
@@ -203,11 +226,12 @@
                   >
                     Coursework:
                   </span>
-                  Software Engineering, Computer Networks, Cyber Security, Business Intelligence and Data Warehousing,
-                  Software Security, Mobile Application Development, Usability.
+                  Software Engineering, Computer Networks, Cyber Security,
+                  Business Intelligence and Data Warehousing, Software Security,
+                  Mobile Application Development, Usability.
                 </p>
               </section>
-              <!--school 2--------------------------------------------------------------------------------------------->
+              <!--Certification 1-------------------------------------------------------------------------------------------->
               <section class="pb-4 mt-4 mb-4 break-inside-avoid">
                 <header>
                   <a
@@ -223,12 +247,12 @@
                     </span>
                   </a>
                   <p class="leading-normal text-md text-gray-550">
-                    2022  &ndash; 2025 | Certificate
+                    2022 &ndash; 2025 | Certificate
                   </p>
                 </header>
               </section>
 
-              <!--school 3 --------------------------------------------------------------------------------->
+              <!--Certification 2--------------------------------------------------------------------------------->
               <section class="pb-2 mt-4 break-inside-avoid">
                 <header>
                   <a
@@ -244,7 +268,7 @@
                     </span>
                   </a>
                   <p class="leading-normal text-md text-gray-550">
-                    2022  &ndash; 2025 | Certificate
+                    2022 &ndash; 2025 | Certificate
                   </p>
                 </header>
               </section>
@@ -269,7 +293,7 @@
                 </header>
                 <div class="my-1 last:pb-1">
                   <ul
-                    class="flex flex-wrap text-sm leading-relaxed -mr-1.6 -mb-1"
+                    class="flex flex-wrap text-m leading-relaxed -mr-1.6 -mb-1"
                   >
                     <li
                       class="px-2.5 mr-1.6 mb-1 text-gray-200 leading-relaxed print:bg-white print:border-inset bg-gray-250"
@@ -359,6 +383,12 @@
                     >
                       Blue/Green Deployment
                     </li>
+
+                    <li
+                    class="px-2.5 mr-1.6 mb-1 text-gray-200 leading-relaxed print:bg-white print:border-inset bg-gray-250"
+                  >
+                    CI/CD
+                  </li>
                   </ul>
                 </div>
               </section>
@@ -466,14 +496,19 @@
                     >
                       &rsaquo;
                     </span>
-                    Developed a React web application for a car salesman that improved website performance drastically and reduced latency for users.              </li>
+                    Developed a React web application for a car salesman that
+                    improved website performance drastically and reduced latency
+                    for users.
+                  </li>
                   <li>
                     <span
                       class="transform -translate-y-px select-none text-gray-550"
                     >
                       &rsaquo;
                     </span>
-                    Successfully deployed 2 static websites on Amazon S3 and set up an Amazon CloudFront distribution to speed up the distribution of static content.
+                    Successfully deployed static websites on Amazon S3 and set
+                    up an Amazon CloudFront distribution to speed up the
+                    distribution of static content.
                   </li>
                 </ul>
               </section>
@@ -496,8 +531,9 @@
                     >
                       &rsaquo;
                     </span>
-                    Teaching weekly tutorials of between 10-15 students, facilitating discussions around course
-                    material and weekly class topics.
+                    Teaching weekly tutorials of between 10-15 students,
+                    facilitating discussions around course material and weekly
+                    class topics.
                   </li>
                   <li>
                     <span
@@ -505,8 +541,8 @@
                     >
                       &rsaquo;
                     </span>
-                    Providing online support to and interaction with students, including 
-                    sending informational emails/reminders via email.
+                    Providing online support to and interaction with students,
+                    including sending informational emails/reminders via email.
                   </li>
                 </ul>
               </section>
@@ -556,7 +592,10 @@
                   </p>
                 </header>
                 <p class="mt-2.1 text-md text-gray-700 leading-normal">
-                  A unique and streamlined car salesman website that combines the benefits of Gatsby's static site generation and a headless cms aspect of JamStack development. The interface is clean and features graphics designed personally for use within the site.
+                  A unique and streamlined car salesman website that combines
+                  the benefits of Gatsby's static site generation and a headless
+                  cms aspect of JamStack development. The interface is clean and
+                  features graphics designed personally for use within the site.
                 </p>
               </section>
               <!--Project 2-->
@@ -581,7 +620,7 @@
                       class="inline-block font-normal transition duration-100 ease-in text-gray-550 print:text-black group-hover:text-gray-700"
                     >
                       <a
-                        href="https://github.com/kmabika/cloud-resume-challenge"
+                        href="https://github.com/kmabika/crc-frontend"
                         target="_blank"
                       >
                         <i class="fab fa-github"></i>
@@ -589,12 +628,14 @@
                     </span>
                   </h3>
                   <p class="leading-normal text-md text-gray-550">
-                    2022 | Amazon S3, AWS Lambda, API Gateway, DynamoDB, Python, HTML, CSS , JavaScript
+                    2022 | Amazon S3, AWS Lambda, API Gateway, DynamoDB, Python,
+                    HTML, CSS , JavaScript
                   </p>
                 </header>
                 <p class="mt-2.1 text-md text-gray-700 leading-normal">
                   Developed as part of the process of learning the AWS services,
-                  this website utilizes Amazon S3 for static website hosting and AWS serverless services to count visitors.
+                  this website utilizes Amazon S3 for static website hosting and
+                  AWS serverless services to count visitors.
                 </p>
               </section>
               <!--Project 3---------------------------------------------------------->
@@ -603,7 +644,10 @@
                   <h3
                     class="text-lg font-semibold text-gray-700 leading-snugish"
                   >
-                    <a href="https://github.com/kmabika/event-driven-python" class="group">
+                    <a
+                      href="https://github.com/kmabika/event-driven-python"
+                      class="group"
+                    >
                       Event-Driven Python
                       <span
                         class="inline-block mr-3 font-normal transition duration-100 ease-in text-gray-550 print:text-black group-hover:text-gray-700"
@@ -614,9 +658,7 @@
                     <span
                       class="inline-block font-normal transition duration-100 ease-in text-gray-550 print:text-black group-hover:text-gray-700"
                     >
-                      <a
-                        href="https://github.com/kmabika/event-driven-python"
-                      >
+                      <a href="https://github.com/kmabika/event-driven-python">
                         <i class="fab fa-github"></i>
                       </a>
                     </span>
@@ -626,7 +668,11 @@
                   </p>
                 </header>
                 <p class="mt-2.1 text-md text-gray-700 leading-normal">
-                  An automated ETL processing pipeline for COVID-19 data using Python and cloud services built whilst learning AWS services. The ETL process collects COVID-19 data from real-time repositories, cleans and filters the data, and loads it into a database.
+                  An automated ETL processing pipeline for COVID-19 data using
+                  Python and cloud services built whilst learning AWS services.
+                  The ETL process collects COVID-19 data from real-time
+                  repositories, cleans and filters the data, and loads it into a
+                  database.
                 </p>
               </section>
               <!--Project 4---------------------------------------------------------->
@@ -635,10 +681,7 @@
                   <h3
                     class="text-lg font-semibold text-gray-700 leading-snugish"
                   >
-                    <a
-                      href="https://mjfencing.co.za"
-                      class="group"
-                    >
+                    <a href="https://mjfencing.co.za" class="group">
                       MjFencing
                       <span
                         class="inline-block mr-3 font-normal transition duration-100 ease-in text-gray-550 print:text-black group-hover:text-gray-700"
@@ -649,9 +692,7 @@
                     <span
                       class="inline-block font-normal transition duration-100 ease-in text-gray-550 print:text-black group-hover:text-gray-700"
                     >
-                      <a
-                        href="https://github.com/kmabika/mjfencing.co.za"
-                      >
+                      <a href="https://github.com/kmabika/mjfencing.co.za">
                         <i class="fab fa-github"></i>
                       </a>
                     </span>
@@ -661,7 +702,9 @@
                   </p>
                 </header>
                 <p class="mt-2.1 text-md text-gray-700 leading-normal">
-                  A fencing company portfolio built using Gatsby.js that utilizes Amazon S3 and CloudFront to reduce latency and speed up distribution of content to users.
+                  A fencing company portfolio built using Gatsby.js that
+                  utilizes Amazon S3 and CloudFront to reduce latency and speed
+                  up distribution of content to users.
                 </p>
               </section>
             </div>
@@ -669,7 +712,13 @@
         </div>
         <!-- end Column -->
       </div>
-
+      <div class="m-b-5">
+        <p class="mt-4 text-center leading-normal text-gray-700 text-md">
+          Built ❤️ using HTML•CSS•JavaScript•AWS Lambda•AWS API Gateway•AWS
+          DynamoDB, Hosted on Amazon S3
+        </p>
+      </div>
+    </div>
       <!-- end Page -->
     </main>
   </body>
