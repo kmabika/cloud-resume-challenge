@@ -40,4 +40,4 @@
 - [x] Develop HTML CSS JavaScript
 - [x] Deploy Resume on Amazon S3 as static website
 - [x] Setup Cloudfront distribution and custom domain name with Route 53
-- [ ] CI/CD Github actions to upload source code to S3
+- [x] CI/CD Github actions to upload source code to S3
