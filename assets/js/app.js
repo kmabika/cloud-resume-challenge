@@ -1,5 +1,5 @@
 function updateCounter() {
-  fetch("https://cdfxcvya0f.execute-api.af-south-1.amazonaws.com/prod/counter")
+  fetch(process.env.Lamba)
     .then((response) => response.text())
     .then((body) => {
       document.getElementById("counter").innerHTML = body;
